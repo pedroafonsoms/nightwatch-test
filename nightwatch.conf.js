@@ -1,17 +1,28 @@
 module.exports = {
 
-    src_folders: ["src/tests"],
+    src_folders: ['src/tests'],
 
-    webdriver: {
-        start_process: true,
-        port: 9515,
-        server_path: require('chromedriver').path
-    },
+    page_objects_path: './src/pages',
 
     test_settings: {
         default: {
+            launch_url: 'https://pokedex.org/',
             desiredCapabilities: {
-                browserName: 'chrome'
+                browserName: 'chrome',
+            },
+            webdriver: {
+                start_process: true,
+                port: 9515,
+                server_path: require('chromedriver').path
+            }
+        },
+
+        headless: {
+            desiredCapabilities: {
+                browserName: 'chrome',
+                chromeOptions: {
+                    args: ['--headless']
+                }
             }
         }
     }
