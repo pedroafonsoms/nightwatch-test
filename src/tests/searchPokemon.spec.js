@@ -1,24 +1,3 @@
-
-/* describe('Details Pokémon', function () {
-
-    before((browser) => {
-        const searchPage = browser.page.searchpage()
-    })
-
-    test('Search for a specific Pokémon', (browser) => {
-        searchPage.navigate()
-            .setValue('@searchField', 'charizard')
-            .expect.elements('@listResult').count.to.equal(1) 
-    })
-
-    test('Search for a group Pokémon', (browser) => {
-        searchPage.navigate()
-            .setValue('@searchField', 'char')
-            .expect.elements('@listResult').count.to.equal(3)
-    })
-
-})
- */
 module.exports = {
 
     beforeEach: (browser) => {

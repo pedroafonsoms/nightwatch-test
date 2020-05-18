@@ -1,5 +1,5 @@
 
-const actions = {
+let actions = {
     searchFor: function(name) {
         return this.setValue('@searchField', name)
     },
